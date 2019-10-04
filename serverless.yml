@@ -6,7 +6,7 @@ provider:
     runtime: provided
     environment:
         # Laravel environment variables
-        APP_STORAGE: '/tmp'
+        APP_STORAGE: '/tmp/storage'
 
 plugins:
     - ./vendor/bref/bref
