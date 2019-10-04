@@ -15,6 +15,7 @@ package:
     exclude:
         - 'node_modules/**'
         - 'storage/**'
+        - 'tests/**'
 
 functions:
     website:
