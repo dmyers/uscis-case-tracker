@@ -16,6 +16,8 @@ package:
         - 'node_modules/**'
         - 'storage/**'
         - 'tests/**'
+        - 'resources/js/**'
+        - 'resources/sass/**'
 
 functions:
     website:
