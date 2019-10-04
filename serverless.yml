@@ -11,6 +11,11 @@ provider:
 plugins:
     - ./vendor/bref/bref
 
+package:
+    exclude:
+        - 'node_modules/**'
+        - 'storage/**'
+
 functions:
     website:
         handler: public/index.php
