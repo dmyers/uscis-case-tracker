@@ -2,6 +2,10 @@
 
 namespace App;
 
+// @see https://github.com/laravel/vapor-core/search?q=StorageDirectories&unscoped_q=StorageDirectories
+// @see https://github.com/laravel/vapor-core/blob/1129ef2773bd061f6faf58de98ef5f36ee6be9d1/stubs/fpmRuntime.php
+// @see https://github.com/laravel/vapor-core/blob/9a486ab614e92c01cbd2d089b01cc0124c8eff0a/src/Runtime/StorageDirectories.php
+// @see https://github.com/laravel/vapor-core/blob/2.0/src/VaporServiceProvider.php
 class StorageDirectories
 {
     /**
