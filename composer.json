@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "bref/bref": "^0.5.7",
+        "fabpot/goutte": "^3.2",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^6.0",
