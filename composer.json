@@ -15,6 +15,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
+        "paquettg/php-html-parser": "^2.1",
         "symfony/dom-crawler": "^4.3"
     },
     "require-dev": {
