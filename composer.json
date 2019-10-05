@@ -16,6 +16,7 @@
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "paquettg/php-html-parser": "^2.1",
+        "spatie/regex": "^1.4",
         "symfony/dom-crawler": "^4.3"
     },
     "require-dev": {
