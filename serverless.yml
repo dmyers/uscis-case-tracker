@@ -3,6 +3,7 @@ service: app
 provider:
     name: aws
     region: us-east-1
+    stage: dev
     runtime: provided
     environment:
         # Laravel environment variables
