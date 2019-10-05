@@ -4,6 +4,12 @@ namespace App\Services\Uscis;
 
 use RuntimeException;
 
+/**
+ * Parses tracking numbers for packages.
+ *
+ * @see https://github.com/jkeen/tracking_number_data/tree/master
+ * @see https://github.com/jkeen/tracking_number/tree/master/lib
+ */
 class TrackingParser
 {
     /**
