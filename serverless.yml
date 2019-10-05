@@ -6,6 +6,7 @@ provider:
     runtime: provided
     environment:
         # Laravel environment variables
+        APP_ENV: 'production'
         APP_STORAGE: '/tmp/storage'
 
 plugins:
