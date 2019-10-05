@@ -138,7 +138,7 @@ return [
         /*
          * Storage provider ensures directories exist.
          */
-        App\Providers\StorageServiceProvider::class,
+        // App\Providers\StorageServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...
