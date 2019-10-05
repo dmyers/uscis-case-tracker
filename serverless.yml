@@ -36,3 +36,20 @@ functions:
         layers:
             - ${bref:layer.php-72} # PHP
             - ${bref:layer.console} # The "console" layer
+
+resources:
+    Resources:
+        Assets: # The S3 bucket that stores the assets
+            Type: AWS::S3::Bucket
+            Properties:
+                BucketName: uscis-case-tracker
+        AssetsBucketPolicy: # The policy that makes the bucket publicly readable
+            Type: AWS::S3::BucketPolicy
+            Properties:
+                Bucket: !Ref Assets # References the bucket we defined above
+                PolicyDocument:
+                    Statement:
+                        -   Effect: Allow
+                            Principal: '*' # everyone
+                            Action: 's3:GetObject' # to read
+                            Resource: 'arn:aws:s3:::uscis-case-tracker/*' # things in the bucket
