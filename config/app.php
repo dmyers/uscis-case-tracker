@@ -164,6 +164,7 @@ return [
         /*
          * Package Service Providers...
          */
+        App\Services\Uscis\UscisServiceProvider::class,
 
         /*
          * Application Service Providers...
