@@ -12,7 +12,7 @@ class StorageDirectories
     public const PATH = '/tmp/storage';
 
     /**
-     * Bootstrap any application services.
+     * Ensure the necessary storage directories exist.
      *
      * @return void
      */
@@ -27,7 +27,6 @@ class StorageDirectories
             $path.'/framework/views',
         ];
 
-        // Make sure the storage directories exist
         foreach ($directories as $directory) {
             if (!is_dir($directory)) {
                 mkdir($directory, 0755, true);
