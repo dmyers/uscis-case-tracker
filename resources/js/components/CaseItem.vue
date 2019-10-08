@@ -23,6 +23,7 @@
         <div v-cloak v-if="open">
             <b-card-body>
                 <b-card-text>
+                    <h5 class="h5 text-center">{{ item.title }}</h5>
                     <p class="m-0 p-0">{{ item.details }}</p>
                 </b-card-text>
             </b-card-body>
