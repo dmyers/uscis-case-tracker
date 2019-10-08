@@ -16,7 +16,7 @@
                     <fa-icon :icon="['fas', 'redo-alt']" size="sm" />
                 </a>
 
-                <a v-cloak v-if="item.tracking" @click="openTracking" href="javascript:void(0)" class="ml-2">
+                <a v-cloak v-if="item.tracking" @click.stop.prevent="openTracking" href="javascript:void(0)" class="ml-2">
                     <fa-icon :icon="['fas', 'shipping-fast']" size="sm" />
                 </a>
             </div>
