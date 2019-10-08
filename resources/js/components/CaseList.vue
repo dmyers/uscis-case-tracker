@@ -63,7 +63,21 @@ export default {
         };
     },
 
-    mounted() {},
+    mounted() {
+        this.loadCases();
+    },
+
+    watch: {
+        cases: {
+            handler() {
+                const cases = this.cases;
+                const encodedCases = JSON.stringify(cases);
+                localStorage.setItem('cases', encodedCases);
+            },
+
+            deep: true
+        }
+    },
 
     computed: {
         emptyCases() {
@@ -107,6 +121,15 @@ export default {
                     console.log(error);
                     cb(null, error);
                 });
+        },
+
+        loadCases() {
+            console.log('loading cases');
+            const cases = localStorage.getItem('cases');
+            if (cases) {
+                const decodedCases = JSON.parse(cases);
+                this.cases = decodedCases;
+            }
         }
     }
 }
