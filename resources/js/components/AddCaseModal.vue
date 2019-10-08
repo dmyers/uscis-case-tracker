@@ -40,7 +40,10 @@ export default {
         addCase() {
             const caseId = this.caseId;
             this.$emit('caseAdded', caseId);
-            this.$refs.modal.hide();
+
+            this.$nextTick(() => {
+                this.$refs.modal.hide();
+            });
         }
     }
 }

@@ -133,6 +133,7 @@ export default {
                 .catch((error) => {
                     console.log(error);
                     const response = error.response;
+                    console.log(response);
                     const errors = response.errors;
                     console.log(errors);
                     cb(null, errors);
