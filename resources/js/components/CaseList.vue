@@ -132,11 +132,10 @@ export default {
             axios.get('uscis/cases/' + caseId)
                 .then((response) => {
                     const caseItem = response.data;
-                    console.log(caseItem);
                     cb(caseItem, null);
                 })
                 .catch((error) => {
-                    console.log(error);
+                    console.error(error);
                     cb(null, error);
                 });
         },
