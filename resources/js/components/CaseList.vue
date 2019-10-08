@@ -132,6 +132,9 @@ export default {
                 })
                 .catch((error) => {
                     console.log(error);
+                    const response = error.response;
+                    const errors = response.errors;
+                    console.log(errors);
                     cb(null, error);
                 });
         },
