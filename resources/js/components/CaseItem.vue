@@ -53,3 +53,17 @@ export default {
     methods: {}
 }
 </script>
+
+<style lang="scss">
+.card footer {
+    padding-top: 0.25rem;
+    padding-bottom: 0.4rem;
+}
+.card-header .case-title {
+    font-size: 150%;
+}
+.card-body p {
+    font-size: 0.8rem;
+    line-height: 18px;
+}
+</style>

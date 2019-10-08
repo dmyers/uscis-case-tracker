@@ -107,17 +107,6 @@ export default {
     font-weight: 900 !important;
     letter-spacing: -1px;
 }
-.card footer {
-    padding-top: 0.25rem;
-    padding-bottom: 0.4rem;
-}
-.card-header .case-title {
-    font-size: 150%;
-}
-.card-body p {
-    font-size: 0.8rem;
-    line-height: 18px;
-}
 .fa-flag-usa {
     background-image: linear-gradient(red, white, blue);
 }
