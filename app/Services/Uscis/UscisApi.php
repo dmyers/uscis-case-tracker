@@ -64,11 +64,11 @@ class UscisApi
                     'Referer' => 'https://egov.uscis.gov/casestatus/landing.do',
                 ],
                 'form_params' => [
-                    'changeLocale'  => '',
+                    'changeLocale'                => '',
                     'completedActionsCurrentPage' => '',
                     'upcomingActionsCurrentPage'  => '',
-                    'appReceiptNum' => $caseNumber,
-                    'caseStatusSearchBtn' => 'CHECK STATUS',
+                    'appReceiptNum'               => $caseNumber,
+                    'caseStatusSearchBtn'         => 'CHECK STATUS',
                 ],
             ]);
 
