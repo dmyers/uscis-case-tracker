@@ -50,7 +50,7 @@
             </b-col>
         </b-row>
 
-        <add-case-modal @caseAdded="caseAdded" />
+        <add-case-modal @caseAdded="appendCaseItem" />
     </div>
 </template>
 
@@ -94,7 +94,7 @@ export default {
     },
 
     methods: {
-        caseAdded(caseItem) {
+        appendCaseItem(caseItem) {
             this.cases.push(caseItem);
         },
 
