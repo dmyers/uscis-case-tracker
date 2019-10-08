@@ -13,6 +13,10 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    @if (app()->isLocal())
+        <script src="http://localhost:8080/js/app.js"></script>
+    @else
+        <script src="{{ asset('js/app.js') }}"></script>
+    @endif
 </body>
 </html>
