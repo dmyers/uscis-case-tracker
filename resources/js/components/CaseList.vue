@@ -157,6 +157,6 @@ export default {
     letter-spacing: -1px;
 }
 .fa-flag-usa {
-    background-image: linear-gradient(red, white, blue);
+    // background-image: linear-gradient(red, white, blue);
 }
 </style>
