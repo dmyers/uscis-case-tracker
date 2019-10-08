@@ -99,7 +99,12 @@ export default {
     },
 
     methods: {
+        hasCaseItem(caseItem) {
+            return _.includes(this.caseIds, caseItem.caseNumber);
+        },
+
         appendCaseItem(caseItem) {
+            if (this.hasCaseItem(caseItem)) return;
             this.cases.push(caseItem);
         },
 
