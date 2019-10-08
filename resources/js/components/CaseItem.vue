@@ -15,6 +15,10 @@
                 <a @click="reload($event)" class="ml-2">
                     <fa-icon :icon="['fas', 'redo-alt']" size="sm" />
                 </a>
+
+                <a v-cloak v-if="item.tracking" :href="trackingUrl" class="ml-2">
+                    <fa-icon :icon="['fas', 'shipping-fast']" size="sm" />
+                </a>
             </div>
 
             <div class="clearfix"></div>
@@ -50,6 +54,10 @@ export default {
     mounted() {},
 
     computed: {
+        trackingUrl() {
+            return 'https://tools.usps.com/go/TrackConfirmAction?tLabels=' + this.item.tracking;
+        },
+
         statusVariant() {
             if (this.item.status_code === 'complete') {
                 return 'success';
