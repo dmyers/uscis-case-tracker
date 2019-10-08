@@ -12,7 +12,12 @@
         </template>
 
         <b-form @submit.stop.prevent="onFormSubmit" ref="form">
-            <b-form-group label="Case Number" label-for="case-number" label-size="lg">
+            <b-form-group label-for="case-number" label-size="lg">
+                <template v-slot:label>
+                    <fa-icon :icon="['far', 'sticky-note']" class="mr-1" />
+                    Case Number
+                </template>
+
                 <b-form-input @keyup.stop.enter="onFormSubmit" @keypress="filterCaseInput($event)" v-model="caseId" :class="{ 'is-invalid': hasError('caseNumber') }" type="text" size="lg" ref="caseNumber" id="case-number" placeholder="ABC1234567890" maxlength="13" trim required />
                 <b-form-invalid-feedback v-cloak v-if="hasError('caseNumber')" :force-show="true">
                     {{ firstError('caseNumber') }}
