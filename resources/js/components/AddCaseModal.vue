@@ -44,7 +44,7 @@ export default {
         resetModal() {
             this.caseId = "";
             this.loading = false;
-            this.errors = {};
+            this.errors = new Errors();
         },
 
         onFormSubmit() {
