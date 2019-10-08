@@ -5,20 +5,18 @@
                 <h2 class="h2 float-left">
                     <fa-icon :icon="['fas', 'flag-usa']" size="2x" class="rounded mr-2 p-2" />
                     My Cases
-                    <span v-cloak v-show="loading" class="ml-2">
-                        <fa-icon :icon="['fas', 'circle-notch']" spin />
-                    </span>
+                    <fa-icon v-cloak v-show="loading" :icon="['fas', 'circle-notch']" class="ml-2" spin />
                 </h2>
 
                 <div class="float-right">
                     <b-button-group>
                         <b-button v-b-modal.modal-add-case variant="primary">
-                            <fa-icon :icon="['fas', 'plus']" />
+                            <fa-icon :icon="['fas', 'plus']" class="mr-1" />
                             Add Case
                         </b-button>
 
                         <b-button v-b-modal.modal-import-cases variant="outline-primary" disabled>
-                            <fa-icon :icon="['far', 'arrow-alt-circle-down']" />
+                            <fa-icon :icon="['far', 'arrow-alt-circle-down']" class="mr-1" />
                             Import Cases
                         </b-button>
                     </b-button-group>
