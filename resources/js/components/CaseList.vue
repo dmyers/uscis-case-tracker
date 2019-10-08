@@ -3,7 +3,7 @@
         <b-row no-gutters>
             <b-col lg="8" offset-lg="2" sm="12" offset-sm="0">
                 <h2 class="h2 float-left">
-                    <fa-icon :icon="['fas', 'flag-usa']" size="2x" class="rounded mr-2 p-2" />
+                    <fa-icon :icon="['fas', 'flag-usa']" size="xs" class="rounded mr-2" size-old="2x" class-old="p-2" />
                     My Cases
                     <fa-icon v-cloak v-show="loading" :icon="['fas', 'circle-notch']" size="xs" class="ml-2" spin />
                 </h2>
