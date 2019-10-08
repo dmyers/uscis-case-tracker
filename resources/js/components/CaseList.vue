@@ -134,9 +134,7 @@ export default {
                     console.log(error);
                     const response = error.response;
                     const data = response.data;
-                    console.log(response);
                     const errors = data.errors;
-                    console.log(errors);
                     cb(null, error);
                 });
         },
