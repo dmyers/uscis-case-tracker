@@ -44,7 +44,7 @@
                     </div>
 
                     <div v-cloak v-show="!emptyCases" id="cases">
-                        <case-item v-for="(item, key) in cases" :key="key" :item="item" />
+                        <case-item v-for="(item, index) in cases" :key="item.id" :item="item" @reloadCase="updateCase(index, item.caseNumber)" />
                     </div>
                 </div>
             </b-col>
@@ -83,6 +83,16 @@ export default {
                 this.loading = false;
                 if (err) return;
                 this.cases.push(caseItem);
+            });
+        },
+
+        updateCase(index, caseId) {
+            this.loading = true;
+
+            this.fetchCase(caseId, (caseItem, err) => {
+                this.loading = false;
+                if (err) return;
+                this.cases[index] = caseItem;
             });
         },
 

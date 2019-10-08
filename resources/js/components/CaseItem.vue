@@ -11,6 +11,10 @@
                 <b-badge :variant="statusVariant" class="px-2 py-1">
                     <span class="case-title">{{ item.title }}</span>
                 </b-badge>
+
+                <a @click="reload($event)">
+                    <fa-icon :icon="['fas', 'redo-alt']" size="sm" />
+                </a>
             </div>
 
             <div class="clearfix"></div>
@@ -63,7 +67,14 @@ export default {
         }
     },
 
-    methods: {}
+    methods: {
+        reload($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            this.$emit('reloadCase', this.item.caseNumber);
+        }
+    }
 }
 </script>
 
