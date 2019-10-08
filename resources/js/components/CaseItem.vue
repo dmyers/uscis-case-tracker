@@ -34,7 +34,9 @@
         <footer v-cloak v-if="open" class="card-footer">
             <div class="text-center text-muted">
                 <small>
-                    Last Updated: {{ item.date | moment("dddd, MMMM Do YYYY") }}
+                    Last status change:
+                    <span>{{ item.date | moment("from", "now") }}</span>
+                    <!-- <span>{{ item.date | moment("dddd, MMMM Do YYYY") }}</span> -->
                 </small>
             </div>
         </footer>
