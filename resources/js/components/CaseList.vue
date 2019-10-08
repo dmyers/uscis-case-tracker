@@ -25,8 +25,29 @@
                 </div>
                 <div class="clearfix"></div>
 
-                <div id="cases" class="mt-4">
-                    <case-item v-for="(item, key) in cases" :key="key" :item="item" />
+                <div class="mt-4">
+                    <div v-cloak v-show="emptyCases">
+                        <b-alert variant="warning" show>
+                            <div class="p-4 text-center">
+                                <h5 class="h5 mb-4">
+                                    You currently have no linked cases to view.
+                                </h5>
+
+                                <b-row>
+                                    <b-col lg="4" offset-lg="4" sm="12" offset-sm="0">
+                                        <b-button v-b-modal.modal-add-case variant="secondary" size="lg" block>
+                                            <fa-icon :icon="['fas', 'plus']" />
+                                            Add Case
+                                        </b-button>
+                                    </b-col>
+                                </b-row>
+                            </div>
+                        </b-alert>
+                    </div>
+
+                    <div v-cloak v-show="!emptyCases" id="cases">
+                        <case-item v-for="(item, key) in cases" :key="key" :item="item" />
+                    </div>
                 </div>
             </b-col>
         </b-row>
@@ -45,6 +66,12 @@ export default {
     },
 
     mounted() {},
+
+    computed: {
+        emptyCases() {
+            return this.cases.length == 0;
+        }
+    },
 
     methods: {
         caseAdded(caseId) {
