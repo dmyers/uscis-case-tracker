@@ -104,7 +104,7 @@ export default {
             this.fetchCase(caseId, (caseItem, err) => {
                 this.loading = false;
                 if (err) return;
-                this.cases.push(caseItem);
+                this.appendCaseItem(caseItem);
             });
         },
 
