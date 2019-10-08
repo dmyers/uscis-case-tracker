@@ -71,8 +71,15 @@ export default {
         cases: {
             handler() {
                 const cases = this.cases;
-                const encodedCases = JSON.stringify(cases);
-                localStorage.setItem('cases', encodedCases);
+                var caseIds = [];
+
+                _.each(cases, (caseItem) => {
+                    const caseId = caseItem.caseNumber;
+                    caseIds.push(caseId);
+                });
+
+                const encodedCaseIds = JSON.stringify(caseIds);
+                localStorage.setItem('caseIds', encodedCaseIds);
             },
 
             deep: true
