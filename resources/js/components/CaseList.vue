@@ -99,8 +99,8 @@ export default {
     },
 
     methods: {
-        caseAdded(caseId) {
-            this.addCase(caseId);
+        caseAdded(caseItem) {
+            this.cases.push(caseItem);
         },
 
         addCase(caseId) {

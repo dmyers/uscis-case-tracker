@@ -1,8 +1,9 @@
 <template>
-    <b-modal @ok="handleOk" @shown="focusInput" @hidden="resetModal" ref="modal" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
+    <b-modal @ok="handleOk" @shown="focusInput" @hidden="resetModal" :okDisabled="loading" :cancelDisabled="loading" ref="modal" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
         <b-form @submit.stop.prevent="onFormSubmit" ref="form">
             <b-form-group label="Case Number" label-for="case-number" label-size="lg" description="The receipt number for your case from USCIS.">
                 <b-form-input v-model="caseId" type="text" size="lg" ref="caseNumber" id="case-number" placeholder="ABC1234567890" required />
+                <b-form-invalid-feedback v-cloak v-if="errors && errors.caseNumber" :force-show="true">{{ errors.caseNumber[0] }}</b-form-invalid-feedback>
             </b-form-group>
         </b-form>
     </b-modal>
@@ -12,7 +13,9 @@
 export default {
     data() {
         return {
-            caseId: ""
+            caseId: "",
+            loading: false,
+            errors: {}
         };
     },
 
@@ -25,6 +28,8 @@ export default {
 
         resetModal() {
             this.caseId = "";
+            this.loading = false;
+            this.errors = {};
         },
 
         onFormSubmit() {
@@ -38,11 +43,25 @@ export default {
         },
 
         addCase() {
+            this.loading = true;
             const caseId = this.caseId;
-            this.$emit('caseAdded', caseId);
 
-            this.$nextTick(() => {
-                this.$refs.modal.hide();
+            this.$parent.fetchCase(caseId, (caseItem, error) => {
+                this.loading = false;
+
+                if (error) {
+                    const response = error.response;
+                    if (response.status === 422) {
+                        this.errors = response.data.errors;
+                    }
+                }
+                else {
+                    this.$emit('caseAdded', caseItem);
+
+                    this.$nextTick(() => {
+                        this.$refs.modal.hide();
+                    });
+                }
             });
         }
     }
