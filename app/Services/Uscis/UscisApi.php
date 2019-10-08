@@ -103,11 +103,7 @@ class UscisApi
      */
     public function validateCaseNumber(string $caseNumber): bool
     {
-        if (strlen($caseNumber) !== 13) {
-            return false;
-        }
-
-        return true;
+        return (bool) strlen($caseNumber) === 13;
     }
 
     /**
