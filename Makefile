@@ -1,4 +1,5 @@
 setup:
+	cp .env.local .env
 	composer install
 	npm install
 
