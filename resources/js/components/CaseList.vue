@@ -168,7 +168,7 @@ export default {
     font-weight: 900 !important;
     letter-spacing: -1px;
 }
-.fa-flag-usa {
+// .fa-flag-usa {
     // background-image: linear-gradient(red, white, blue);
-}
+// }
 </style>
