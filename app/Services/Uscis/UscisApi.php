@@ -48,6 +48,7 @@ class UscisApi
      *
      * @param  string  $caseNumber
      * @return array
+     * @throws InvalidArgumentException
      */
     public function getCaseInfo(string $caseNumber)
     {
