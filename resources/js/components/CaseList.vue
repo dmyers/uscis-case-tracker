@@ -63,6 +63,8 @@ export default {
         };
     },
 
+    created() {},
+
     mounted() {
         this.loadCases();
     },
@@ -78,8 +80,13 @@ export default {
                     caseIds.push(caseId);
                 });
 
-                const encodedCaseIds = JSON.stringify(caseIds);
+                const caseList = {
+                    caseIds: caseIds
+                };
+
+                const encodedCaseIds = JSON.stringify(caseList);
                 localStorage.setItem('caseIds', encodedCaseIds);
+                // localStorage.setItem('caseIds', caseIds);
             },
 
             deep: true
@@ -131,10 +138,13 @@ export default {
         },
 
         loadCases() {
-            const cases = localStorage.getItem('cases');
-            if (cases) {
-                const decodedCases = JSON.parse(cases);
-                this.cases = decodedCases;
+            const caseIdList = localStorage.getItem('caseIds');
+            if (caseIdList) {
+                const decodedCaseList = JSON.parse(caseIdList);
+                const caseIds = decodedCaseList.caseIds;
+                _.each(caseIds, (caseId) => {
+                    this.addCase(caseId);
+                });
             }
         }
     }
