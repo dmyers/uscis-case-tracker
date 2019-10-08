@@ -36,6 +36,10 @@ class ApiController extends Controller
         $uscis = app('uscis');
         $case = $uscis->getCaseInfo($caseNumber);
 
+        if ($case['status'] === 'Card Was Delivered To Me By The Post Office') {
+            $case['status'] = 'Card Was Delivered';
+        }
+
         $case['status_code'] = 'unknown';
         if (strpos(strtolower($case['title']), 'received') !== false) {
             $case['status_code'] = 'pending';
