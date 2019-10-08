@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="app" class="mt-5">
-        <case-list />
+        <div class="container">
+            <case-list />
+        </div>
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
