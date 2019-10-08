@@ -15,7 +15,7 @@ class ApiController extends Controller
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function __invoke(Request $request, $caseNumber)
+    public function __invoke(Request $request, $caseNumber = null)
     {
         $data = compact('caseNumber');
 
