@@ -1,5 +1,5 @@
 <template>
-    <b-modal @shown="focusInput" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
+    <b-modal @shown="focusInput" ref="modal" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
         <b-form @submit.prevent="addCase">
             <b-form-group label="Case Number" label-for="case-number" label-size="lg" description="The receipt number for your case from USCIS.">
                 <b-form-input v-model="caseId" type="text" size="lg" ref="caseNumber" id="case-number" placeholder="ABC01234567890" required />
@@ -12,7 +12,7 @@
 export default {
     data() {
         return {
-            caseId: null
+            caseId: ""
         };
     },
 
@@ -26,7 +26,8 @@ export default {
         addCase() {
             const caseId = this.caseId;
             this.$emit('caseAdded', caseId);
-            this.caseId = null;
+            this.$bvModal.hide('modal-add-case');
+            this.caseId = "";
         }
     }
 }
