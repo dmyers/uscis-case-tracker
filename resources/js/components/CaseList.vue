@@ -3,6 +3,7 @@
         <b-row no-gutters>
             <b-col cols="8" offset="2">
                 <h2 class="float-left">
+                    <fa-icon :icon="['fas', 'flag-usa']" size="2x" class="rounded mr-2 p-2" />
                     My Cases
                     <span v-cloak v-show="loading" class="ml-2">
                         <fa-icon :icon="['fas', 'circle-notch']" spin />
@@ -114,5 +115,8 @@ export default {
 .card-body p {
     font-size: 0.8rem;
     line-height: 18px;
+}
+.fa-flag-usa {
+    background-image: linear-gradient(red, white, blue);
 }
 </style>
