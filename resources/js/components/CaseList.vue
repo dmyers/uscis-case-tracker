@@ -137,7 +137,7 @@ export default {
                     console.log(response);
                     const errors = data.errors;
                     console.log(errors);
-                    cb(null, errors);
+                    cb(null, error);
                 });
         },
 
