@@ -1,5 +1,13 @@
 <template>
     <b-modal @ok="handleOk" @shown="focusInput" @hidden="resetModal" :okDisabled="loading" :cancelDisabled="loading" ref="modal" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
+        <template v-slot:modal-header="{ close }">
+            <h4 class="h4 modal-title">Add Case</h4>
+
+            <button @click="close" type="button" class="close">
+                <fa-icon :icon="['fas', 'times']" />
+            </button>
+        </template>
+
         <b-form @submit.stop.prevent="onFormSubmit" ref="form">
             <b-form-group label="Case Number" label-for="case-number" label-size="lg">
                 <b-form-input @keyup.stop.enter="onFormSubmit" @keypress="filterCaseInput($event)" v-model="caseId" :class="{ 'is-invalid': hasError('caseNumber') }" type="text" size="lg" ref="caseNumber" id="case-number" placeholder="ABC1234567890" maxlength="13" trim required />
