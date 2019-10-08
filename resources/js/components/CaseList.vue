@@ -124,7 +124,6 @@ export default {
         },
 
         loadCases() {
-            console.log('loading cases');
             const cases = localStorage.getItem('cases');
             if (cases) {
                 const decodedCases = JSON.parse(cases);
