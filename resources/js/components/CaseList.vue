@@ -139,7 +139,7 @@ export default {
             if (caseIdList) {
                 const decodedCaseList = JSON.parse(caseIdList);
                 const caseIds = decodedCaseList.caseIds;
-                _.each(caseIds, (caseId) => {
+                _.each(caseIds, caseId => {
                     this.addCase(caseId);
                 });
             }
