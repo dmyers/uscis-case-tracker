@@ -5,7 +5,7 @@
                 <span class="text-muted"><strong>Case</strong> #</span>{{ item.id }}
             </h5>
 
-            <b-badge class="float-right">
+            <b-badge :variant="statusVariant" class="float-right">
                 <span class="case-title">{{ item.title }}</span>
             </b-badge>
 
@@ -35,6 +35,20 @@ export default {
     },
 
     mounted() {},
+
+    computed: {
+        statusVariant() {
+            if (this.item.status_code === 'complete') {
+                return 'success';
+            }
+            else if (this.item.status_code === 'pending') {
+                return 'warning';
+            }
+            else {
+                return null;
+            }
+        }
+    },
 
     methods: {}
 }
