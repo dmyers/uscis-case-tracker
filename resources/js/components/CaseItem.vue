@@ -79,6 +79,8 @@ export default {
 
 <style lang="scss">
 .card {
+    border-width: 2px !important;
+
     .card-header {
         cursor: pointer;
         border-width: 0;
