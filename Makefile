@@ -1,3 +1,7 @@
+setup:
+	composer install
+	npm install
+
 preview:
 	php artisan serve
 

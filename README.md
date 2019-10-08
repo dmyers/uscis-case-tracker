@@ -2,9 +2,7 @@
 
 ### Setup
 
-`$ composer install`
-
-`$ npm install`
+`$ make setup`
 
 ### Deploy
 
