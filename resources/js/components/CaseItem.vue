@@ -6,9 +6,7 @@
             </h5>
 
             <b-badge class="float-right">
-                <span class="case-title">
-                    {{ item.title }}
-                </span>
+                <span class="case-title">{{ item.title }}</span>
             </b-badge>
 
             <div class="clearfix"></div>
