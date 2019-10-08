@@ -125,7 +125,7 @@ export default {
         },
 
         fetchCase(caseId, cb) {
-            axios.get('/uscis/cases/' + caseId)
+            axios.get('uscis/cases/' + caseId)
                 .then((response) => {
                     const caseItem = response.data;
                     console.log(caseItem);
