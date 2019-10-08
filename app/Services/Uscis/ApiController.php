@@ -35,6 +35,13 @@ class ApiController extends Controller
 
         $uscis = app('uscis');
         $case = $uscis->getCaseInfo($caseNumber);
+        $case['status_code'] = 'unknown';
+
+        if (strpos(strtolower($case['title']), 'received') !== false) {
+            $case['status_code'] = 'pending';
+        } else if (strpos(strtolower($case['title']), 'delivered') !== false) {
+            $case['status_code'] = 'complete';
+        }
 
         return response($case);
     }
