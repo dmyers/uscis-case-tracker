@@ -76,8 +76,8 @@ export default {
         }
     }
     .card-body p {
-        font-size: 0.8rem;
-        line-height: 18px;
+        font-size: 15px;
+        line-height: 22px;
     }
     .card-footer {
         padding-top: 0.25rem;
