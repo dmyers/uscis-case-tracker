@@ -12,7 +12,7 @@
                     <span class="case-status">{{ item.status }}</span>
                 </b-badge>
 
-                <a @click="reload($event)" href="javascript:void(0)" class="ml-2">
+                <a @click.stop.prevent="reload($event)" href="javascript:void(0)" class="ml-2">
                     <fa-icon :icon="['fas', 'redo-alt']" size="sm" />
                 </a>
 
