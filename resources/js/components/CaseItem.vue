@@ -15,9 +15,7 @@
         </template>
 
         <b-card-text>
-            <p class="m-0 p-0">
-                {{ item.details }}
-            </p>
+            <p class="m-0 p-0">{{ item.details }}</p>
         </b-card-text>
 
         <template v-slot:footer>
