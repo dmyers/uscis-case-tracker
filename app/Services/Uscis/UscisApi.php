@@ -86,9 +86,10 @@ class UscisApi
         $tracking = TrackingParser::find($details);
         $date = DateParser::find($details);
         $details = strip_tags($details);
+        $id = $this->formatCaseNumber($caseNumber);
 
         return compact(
-            'caseNumber', 'date', 'tracking',
+            'id', 'caseNumber', 'date', 'tracking',
             'status', 'title', 'details'
         );
     }
@@ -107,5 +108,22 @@ class UscisApi
         }
 
         return true;
+    }
+
+    /**
+     * Convert the case number into the normalized standard format.
+     *
+     * Example: ABC1234567890 becomes ABC-123-456-7890
+     *
+     * @param  string  $caseNumber
+     * @return string
+     */
+    public function formatCaseNumber(string $caseNumber): string
+    {
+        $code = substr($caseNumber, 0, 3);
+        $id   = substr($caseNumber, 3, 3);
+        $id2  = substr($caseNumber, 6, 3);
+        $id3  = substr($caseNumber, 9, 4);
+        return $code.'-'.$id.'-'.$id2.'-'.$id3; //strlen 13+3*-
     }
 }
