@@ -5,7 +5,7 @@
                 <h2 class="h2 float-left">
                     <fa-icon :icon="['fas', 'flag-usa']" size="2x" class="rounded mr-2 p-2" />
                     My Cases
-                    <fa-icon v-cloak v-show="loading" :icon="['fas', 'circle-notch']" class="ml-2" spin />
+                    <fa-icon v-cloak v-show="loading" :icon="['fas', 'circle-notch']" size="xs" class="ml-2" spin />
                 </h2>
 
                 <div class="float-right">
