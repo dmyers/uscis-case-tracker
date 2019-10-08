@@ -28,7 +28,7 @@
                         <b-alert variant="warning" show>
                             <div class="p-4 text-center">
                                 <h5 class="h5 mb-4">
-                                    You currently have no linked cases to view.
+                                    You currently have no cases to view.
                                 </h5>
 
                                 <b-row>
