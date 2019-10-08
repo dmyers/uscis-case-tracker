@@ -9,17 +9,17 @@
                 </h2>
 
                 <div class="float-right">
-                    <b-button-group>
+                    <!-- <b-button-group> -->
                         <b-button v-b-modal.modal-add-case variant="primary">
                             <fa-icon :icon="['fas', 'plus']" class="mr-1" />
                             Add Case
                         </b-button>
 
-                        <b-button v-b-modal.modal-import-cases variant="outline-primary" disabled>
+                        <!-- <b-button v-b-modal.modal-import-cases variant="outline-primary" disabled>
                             <fa-icon :icon="['far', 'arrow-alt-circle-down']" class="mr-1" />
                             Import Cases
-                        </b-button>
-                    </b-button-group>
+                        </b-button> -->
+                    <!-- </b-button-group> -->
                 </div>
                 <div class="clearfix"></div>
 
