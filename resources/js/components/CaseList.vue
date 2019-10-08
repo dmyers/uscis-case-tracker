@@ -4,8 +4,8 @@
             <b-col cols="8" offset="2">
                 <h2 class="float-left">
                     My Cases
-                    <span v-cloak v-show="loading">
-                        - LOADING
+                    <span v-cloak v-show="loading" class="ml-2">
+                        <fa-icon icon="circle-notch" spin />
                     </span>
                 </h2>
                 <div class="float-right">
