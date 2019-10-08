@@ -10,7 +10,7 @@
     </script>
 </head>
 <body>
-    <div id="app" class="mt-2 mt-md-5">
+    <div id="app" class="mt-4 mt-md-5">
         <div class="container">
             <case-list />
         </div>
