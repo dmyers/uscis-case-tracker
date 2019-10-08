@@ -2,13 +2,14 @@
     <div>
         <b-row no-gutters>
             <b-col cols="8" offset="2">
-                <h2 class="float-left">
+                <h2 class="h2 float-left">
                     <fa-icon :icon="['fas', 'flag-usa']" size="2x" class="rounded mr-2 p-2" />
                     My Cases
                     <span v-cloak v-show="loading" class="ml-2">
                         <fa-icon :icon="['fas', 'circle-notch']" spin />
                     </span>
                 </h2>
+
                 <div class="float-right">
                     <b-button-group>
                         <b-button v-b-modal.modal-add-case variant="primary">
@@ -105,6 +106,10 @@ export default {
 </script>
 
 <style lang="scss">
+.h2 {
+    font-weight: 900 !important;
+    letter-spacing: -1px;
+}
 .card footer {
     padding-top: 0.25rem;
     padding-bottom: 0.4rem;
