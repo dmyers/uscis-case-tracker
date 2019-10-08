@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('app');
+Route::get('/', function (Request $request) {
+    $case_ids = $request->input('cid');
+    if (!empty($case_ids)) {
+        $case_ids = explode(',', $case_ids);
+    }
+
+    return view('app', compact('case_ids'));
 });

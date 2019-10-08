@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>USCIS Case Tracker</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script>
+    window.App = {!! collect(compact('case_ids'))->toJson() !!};
+    </script>
 </head>
 <body>
     <div id="app" class="mt-2 mt-md-5">
