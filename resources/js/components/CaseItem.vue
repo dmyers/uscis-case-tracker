@@ -5,7 +5,7 @@
                 <span class="text-muted"><strong>Case</strong> #</span>{{ item.id }}
             </h5>
 
-            <b-badge :variant="statusVariant" class="float-right">
+            <b-badge :variant="statusVariant" class="px-2 py-1 float-right">
                 <span class="case-title">{{ item.title }}</span>
             </b-badge>
 
