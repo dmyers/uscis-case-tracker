@@ -30,7 +30,7 @@ export default {
         addCase() {
             const caseId = this.caseId;
             this.$emit('caseAdded', caseId);
-            this.$bvModal.hide('modal-add-case');
+            this.$refs.modal.hide();
             this.caseId = "";
         }
     }
