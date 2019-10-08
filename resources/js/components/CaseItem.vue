@@ -20,14 +20,12 @@
             <div class="clearfix"></div>
         </header>
 
-        <div v-cloak v-if="open">
-            <b-card-body>
-                <b-card-text>
-                    <h5 class="h5 text-center">{{ item.title }}</h5>
-                    <p class="m-0 p-0">{{ item.details }}</p>
-                </b-card-text>
-            </b-card-body>
-        </div>
+        <b-card-body v-cloak v-if="open">
+            <b-card-text>
+                <h5 class="h5 text-center">{{ item.title }}</h5>
+                <p class="m-0 p-0">{{ item.details }}</p>
+            </b-card-text>
+        </b-card-body>
 
         <footer v-cloak v-if="open" class="card-footer">
             <div class="text-center text-muted">
