@@ -27,7 +27,7 @@
         <b-card-body v-cloak v-if="open">
             <b-card-text>
                 <h5 class="h5 text-center">{{ item.title }}</h5>
-                <p class="m-0 p-0">{{ item.details }}</p>
+                <p v-html="item.details_raw" class="m-0 p-0"></p>
             </b-card-text>
         </b-card-body>
 
