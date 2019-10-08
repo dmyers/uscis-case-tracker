@@ -16,7 +16,7 @@
                     <fa-icon :icon="['fas', 'redo-alt']" size="sm" />
                 </a>
 
-                <a v-cloak v-if="item.tracking" :href="trackingUrl" target="_blank" class="ml-2">
+                <a v-cloak v-if="item.tracking" @click="openTracking" href="javascript:void(0)" class="ml-2">
                     <fa-icon :icon="['fas', 'shipping-fast']" size="sm" />
                 </a>
             </div>
@@ -75,6 +75,13 @@ export default {
     },
 
     methods: {
+        openTracking($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            window.open(this.trackingUrl);
+        },
+
         reload($event) {
             $event.preventDefault();
             $event.stopPropagation();
