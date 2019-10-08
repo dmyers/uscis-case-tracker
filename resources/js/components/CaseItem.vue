@@ -12,7 +12,7 @@
                     <span class="case-title">{{ item.title }}</span>
                 </b-badge>
 
-                <a @click="reload($event)">
+                <a @click="reload($event)" class="ml-2">
                     <fa-icon :icon="['fas', 'redo-alt']" size="sm" />
                 </a>
             </div>
