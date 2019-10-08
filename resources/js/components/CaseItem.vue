@@ -1,6 +1,6 @@
 <template>
     <b-card class="mb-3" no-body>
-        <header @click="open = !open" :class="{'card-header-open': open }" class="card-header">
+        <header @click="open = !open" :class="{'card-header-open': open }" class="card-header p-3">
             <h5 class="float-md-left card-heading mb-0">
                 <fa-icon v-cloak v-show="open" :icon="['fas', 'chevron-down']" size="sm" class="mr-1" />
                 <fa-icon v-cloak v-show="!open" :icon="['fas', 'chevron-right']" size="sm" class="mr-1" />
