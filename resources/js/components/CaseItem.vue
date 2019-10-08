@@ -9,7 +9,7 @@
 
             <div class="float-right">
                 <b-badge :variant="statusVariant" class="px-2 py-1">
-                    <span class="case-title">{{ item.title }}</span>
+                    <span class="case-status">{{ item.status }}</span>
                 </b-badge>
 
                 <a @click="reload($event)" class="ml-2">
@@ -88,7 +88,7 @@ export default {
         &.card-header-open {
             border-width: 1px;
         }
-        .case-title {
+        .case-status {
             font-size: 150%;
         }
     }
