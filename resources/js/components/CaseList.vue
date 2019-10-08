@@ -56,12 +56,10 @@
 
 <script>
 export default {
-    data() {
-        return {
-            cases: [],
-            loading: false
-        };
-    },
+    data: () => ({
+        cases: [],
+        loading: false
+    }),
 
     created() {},
 
