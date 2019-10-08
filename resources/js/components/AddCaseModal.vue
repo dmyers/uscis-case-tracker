@@ -11,6 +11,13 @@
                 </b-form-text>
             </b-form-group>
         </b-form>
+
+        <template v-slot:modal-footer="{ ok, cancel, hide }">
+            <b-button @click="ok" variant="primary" size="lg" block>
+                <fa-icon :icon="['fas', 'plus']" class="mr-1" />
+                Add Case
+            </b-button>
+        </template>
     </b-modal>
 </template>
 
