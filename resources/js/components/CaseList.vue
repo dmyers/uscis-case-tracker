@@ -71,7 +71,7 @@ export default {
     watch: {
         cases: {
             handler() {
-                const caseIds = this.caseIds();
+                const caseIds = this.caseIds;
                 const caseList = { caseIds: caseIds };
                 const encodedCaseIds = JSON.stringify(caseList);
                 localStorage.setItem('caseIds', encodedCaseIds);
