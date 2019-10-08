@@ -86,7 +86,7 @@ export default {
             const cases = this.cases;
             var caseIds = [];
 
-            _.each(cases, (caseItem) => {
+            _.each(cases, caseItem => {
                 caseIds.push(caseItem.caseNumber);
             });
 
