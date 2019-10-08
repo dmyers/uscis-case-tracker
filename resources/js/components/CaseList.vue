@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-row no-gutters>
-            <b-col cols="8" offset="2">
+            <b-col lg="8" offset-lg="2" sm="12" offset-sm="0">
                 <h2 class="h2 float-left">
                     <fa-icon :icon="['fas', 'flag-usa']" size="2x" class="rounded mr-2 p-2" />
                     My Cases
