@@ -2,7 +2,7 @@
     <b-modal @ok="handleOk" @shown="focusInput" @hidden="resetModal" :okDisabled="loading" :cancelDisabled="loading" ref="modal" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
         <b-form @submit.stop.prevent="onFormSubmit" ref="form">
             <b-form-group label="Case Number" label-for="case-number" label-size="lg">
-                <b-form-input v-model="caseId" :class="{ 'is-invalid': hasError('caseNumber') }" type="text" size="lg" ref="caseNumber" id="case-number" placeholder="ABC1234567890" maxlength="13" trim required />
+                <b-form-input @keypress="filterCaseInput($event)" v-model="caseId" :class="{ 'is-invalid': hasError('caseNumber') }" type="text" size="lg" ref="caseNumber" id="case-number" placeholder="ABC1234567890" maxlength="13" trim required />
                 <b-form-invalid-feedback v-cloak v-if="hasError('caseNumber')" :force-show="true">{{ firstError('caseNumber') }}</b-form-invalid-feedback>
                 <b-form-text v-cloak v-else>The receipt number for your case from USCIS.</b-form-text>
             </b-form-group>
@@ -45,6 +45,19 @@ export default {
             this.caseId = "";
             this.loading = false;
             this.errors = new Errors();
+        },
+
+        filterCaseInput($event) {
+            const charCode = $event.which || $event.keyCode;
+            const value = String.fromCharCode(charCode);
+            const regex = new RegExp("^[a-zA-Z0-9*]+$");
+            if (regex.test(value)) {
+                return true;
+            }
+            else {
+                $event.preventDefault();
+                return false;
+            }
         },
 
         onFormSubmit() {
