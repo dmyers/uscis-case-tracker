@@ -7,10 +7,12 @@
 require('./bootstrap');
 
 const BootstrapVue = require('bootstrap-vue');
+const MomentVue = require('vue-moment');
 
 window.Vue = require('vue');
 
 Vue.use(BootstrapVue);
+Vue.use(MomentVue);
 
 /**
  * The following block of code may be used to automatically register your
