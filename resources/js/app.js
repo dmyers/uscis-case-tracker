@@ -15,10 +15,11 @@ Vue.use(BootstrapVue);
 Vue.use(MomentVue);
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faCircleNotch);
+library.add(faPlus, faCircleNotch, faArrowAltCircleDown);
 
 Vue.component('fa-icon', FontAwesomeIcon);
 

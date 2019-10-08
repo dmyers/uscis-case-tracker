@@ -5,13 +5,20 @@
                 <h2 class="float-left">
                     My Cases
                     <span v-cloak v-show="loading" class="ml-2">
-                        <fa-icon icon="circle-notch" spin />
+                        <fa-icon :icon="['fas', 'circle-notch']" spin />
                     </span>
                 </h2>
                 <div class="float-right">
                     <b-button-group>
-                        <b-button v-b-modal.modal-add-case variant="primary">Add Case</b-button>
-                        <b-button v-b-modal.modal-import-cases variant="outline-primary" disabled>Import Cases</b-button>
+                        <b-button v-b-modal.modal-add-case variant="primary">
+                            <fa-icon :icon="['fas', 'plus']" />
+                            Add Case
+                        </b-button>
+
+                        <b-button v-b-modal.modal-import-cases variant="outline-primary" disabled>
+                            <fa-icon :icon="['far', 'arrow-alt-circle-down']" />
+                            Import Cases
+                        </b-button>
                     </b-button-group>
                 </div>
                 <div class="clearfix"></div>
