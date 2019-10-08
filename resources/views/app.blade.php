@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <div id="app" class="mt-1 mt-lg-5">
+    <div id="app" class="mt-1 mt-md-5">
         <div class="container">
             <case-list />
         </div>
