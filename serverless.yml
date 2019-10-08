@@ -18,6 +18,7 @@ package:
         - 'node_modules/**'
         - 'storage/**'
         - 'tests/**'
+        - 'resources/img/**'
         - 'resources/js/**'
         - 'resources/sass/**'
 
