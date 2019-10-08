@@ -44,7 +44,7 @@
                     </div>
 
                     <div v-cloak v-show="!emptyCases" id="cases">
-                        <case-item v-for="(item, index) in cases" :key="item.id" :item="item" @reloadCase="updateCase(index, item.caseNumber)" />
+                        <case-item v-for="(item, index) in cases" :key="item.caseNumber" :item="item" @reloadCase="updateCase(index, item.caseNumber)" />
                     </div>
                 </div>
             </b-col>

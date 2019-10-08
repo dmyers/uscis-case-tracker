@@ -4,7 +4,7 @@
             <h5 class="float-left card-heading mb-0">
                 <fa-icon v-cloak v-show="open" :icon="['fas', 'chevron-down']" size="sm" class="mr-1" />
                 <fa-icon v-cloak v-show="!open" :icon="['fas', 'chevron-right']" size="sm" class="mr-1" />
-                <span class="text-muted"><strong>Case</strong> #</span>{{ item.id }}
+                <span class="text-muted"><strong>Case</strong> #</span>{{ item.caseNumber }}
             </h5>
 
             <div class="float-right">
