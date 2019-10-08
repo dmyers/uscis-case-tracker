@@ -2,7 +2,7 @@
     <b-modal @ok="handleOk" @shown="focusInput" @hidden="resetModal" :okDisabled="loading" :cancelDisabled="loading" ref="modal" id="modal-add-case" title="Add Case" buttonSize="lg" okTitle="Add Case" centered>
         <template v-slot:modal-header="{ close }">
             <h4 class="h4 modal-title">
-                <fa-icon :icon="['fas', 'plus-circle']" />
+                <fa-icon :icon="['fas', 'plus-circle']" class="mr-2" />
                 Add Case
             </h4>
 
