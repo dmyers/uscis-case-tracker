@@ -124,6 +124,6 @@ class UscisApi
         $id   = substr($caseNumber, 3, 3);
         $id2  = substr($caseNumber, 6, 3);
         $id3  = substr($caseNumber, 9, 4);
-        return $code.'-'.$id.'-'.$id2.'-'.$id3; //strlen 13+3*-
+        return $code.'-'.$id.'-'.$id2.'-'.$id3;
     }
 }
