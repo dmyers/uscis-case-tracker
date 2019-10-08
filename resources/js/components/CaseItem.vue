@@ -34,7 +34,7 @@
         <footer v-cloak v-if="open" class="card-footer">
             <div class="text-center text-muted">
                 <small>
-                    <fa-icon :icon="['far', 'clock']" class="mr-1" />
+                    <fa-icon :icon="['far', 'calendar-alt']" class="mr-1" />
                     Last status change:
                     <span>{{ item.date | moment("from", "now") }}</span>
                     <!-- <span>{{ item.date | moment("dddd, MMMM Do YYYY") }}</span> -->
