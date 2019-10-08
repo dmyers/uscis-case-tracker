@@ -1,6 +1,9 @@
 preview:
 	php artisan serve
 
+watch:
+	npm run hot
+
 deploy:
 	php artisan route:clear --env=local
 	php artisan cache:clear --env=local
