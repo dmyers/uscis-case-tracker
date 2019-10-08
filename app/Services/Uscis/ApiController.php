@@ -39,6 +39,14 @@ class ApiController extends Controller
 
         if (strpos(strtolower($case['title']), 'received') !== false) {
             $case['status_code'] = 'pending';
+        } else if (strpos(strtolower($case['title']), 'rejected') !== false) {
+            $case['status_code'] = 'failed';
+        } else if (strpos(strtolower($case['title']), 'updated') !== false) {
+            $case['status_code'] = 'complete';
+        } else if (strpos(strtolower($case['title']), 'approved') !== false) {
+            $case['status_code'] = 'complete';
+        } else if (strpos(strtolower($case['title']), 'completed') !== false) {
+            $case['status_code'] = 'complete';
         } else if (strpos(strtolower($case['title']), 'delivered') !== false) {
             $case['status_code'] = 'complete';
         }

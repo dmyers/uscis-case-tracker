@@ -52,6 +52,9 @@ export default {
             else if (this.item.status_code === 'pending') {
                 return 'warning';
             }
+            else if (this.item.status_code === 'failed') {
+                return 'danger';
+            }
             else {
                 return null;
             }
