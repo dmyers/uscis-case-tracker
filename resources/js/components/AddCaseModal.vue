@@ -49,14 +49,15 @@ export default {
             const value = this.caseId;
             const charCode = $event.which || $event.keyCode;
             const keyValue = String.fromCharCode(charCode);
+            var regex;
 
             if (value.length < 3) {
                 const alphaRegex = new RegExp("^[a-zA-Z*]+$");
-                const regex = alphaRegex;
+                regex = alphaRegex;
             }
             else {
                 const numericRegex = new RegExp("^[0-9*]+$");
-                const regex = numericRegex;
+                regex = numericRegex;
             }
 
             if (regex.test(keyValue)) {
