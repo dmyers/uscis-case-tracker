@@ -47,11 +47,9 @@
 export default {
     props: ['item'],
 
-    data() {
-        return {
-            open: false
-        };
-    },
+    data: () => ({
+        open: false
+    }),
 
     mounted() {},
 
