@@ -26,8 +26,14 @@
         <template v-slot:modal-footer="{ ok, cancel, hide }">
             <b-col cols="6">
                 <b-button @click="ok" :disabled="loading" variant="primary" size="lg" block>
-                    <fa-icon :icon="['fas', 'plus']" class="mr-1" />
-                    Add Case
+                    <span v-cloak v-show="loading">
+                        <fa-icon :icon="['fas', 'circle-notch']" spin />
+                    </span>
+
+                    <span v-cloak v-show="!loading">
+                        <fa-icon :icon="['fas', 'plus']" class="mr-1" />
+                        Add Case
+                    </span>
                 </b-button>
             </b-col>
 
