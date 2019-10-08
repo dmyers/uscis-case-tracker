@@ -15,9 +15,9 @@ import { Errors } from 'form-backend-validation';
 
 export default {
     data: () => ({
-            caseId: "",
-            loading: false,
-            errors: new Errors()
+        caseId: "",
+        loading: false,
+        errors: new Errors()
     }),
 
     created() {},
@@ -46,10 +46,20 @@ export default {
         },
 
         filterCaseInput($event) {
+            const value = this.caseId;
             const charCode = $event.which || $event.keyCode;
-            const value = String.fromCharCode(charCode);
-            const regex = new RegExp("^[a-zA-Z0-9*]+$");
-            if (regex.test(value)) {
+            const keyValue = String.fromCharCode(charCode);
+
+            if (value.length < 3) {
+                const alphaRegex = new RegExp("^[a-zA-Z*]+$");
+                const regex = alphaRegex;
+            }
+            else {
+                const numericRegex = new RegExp("^[0-9*]+$");
+                const regex = numericRegex;
+            }
+
+            if (regex.test(keyValue)) {
                 return true;
             }
             else {
