@@ -1,13 +1,13 @@
 <template>
     <b-card class="mb-3" no-body>
         <header @click="open = !open" :class="{'card-header-open': open }" class="card-header">
-            <h5 class="float-left card-heading mb-0">
+            <h5 class="float-md-left card-heading mb-0">
                 <fa-icon v-cloak v-show="open" :icon="['fas', 'chevron-down']" size="sm" class="mr-1" />
                 <fa-icon v-cloak v-show="!open" :icon="['fas', 'chevron-right']" size="sm" class="mr-1" />
                 <span class="text-muted"><strong>Case</strong> #</span>{{ item.caseNumber }}
             </h5>
 
-            <div class="float-right">
+            <div class="float-md-right">
                 <b-badge :variant="statusVariant" class="px-2 py-1">
                     <span class="case-status">{{ item.status }}</span>
                 </b-badge>
