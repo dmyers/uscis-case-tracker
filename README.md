@@ -9,7 +9,3 @@
 ### Deploy
 
 `$ make deploy`
-
-### Serverless example (Laravel PHP)
-
-https://github.com/mnapoli/bref-laravel-demo
