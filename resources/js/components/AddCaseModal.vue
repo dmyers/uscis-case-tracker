@@ -21,10 +21,18 @@
         </b-form>
 
         <template v-slot:modal-footer="{ ok, cancel, hide }">
-            <b-button @click="ok" variant="primary" size="lg" block>
-                <fa-icon :icon="['fas', 'plus']" class="mr-1" />
-                Add Case
-            </b-button>
+            <b-col cols="6">
+                <b-button @click="ok" variant="primary" size="lg" block>
+                    <fa-icon :icon="['fas', 'plus']" class="mr-1" />
+                    Add Case
+                </b-button>
+            </b-col>
+
+            <b-col cols="6">
+                <b-button @click="hide" variant="secondary" size="lg" block>
+                    Cancel
+                </b-button>
+            </b-col>
         </template>
     </b-modal>
 </template>
