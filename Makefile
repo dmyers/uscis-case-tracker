@@ -11,5 +11,6 @@ deploy:
 	php artisan view:clear --env=local
 	composer install --optimize-autoloader --no-dev
 	npm run prod
-	aws s3 sync public s3://uscis-case-tracker --delete
+	aws s3 sync public/css s3://uscis-case-tracker/css --delete
+	aws s3 sync public/js s3://uscis-case-tracker/js --delete
 	serverless deploy
