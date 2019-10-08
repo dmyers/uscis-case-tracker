@@ -14,13 +14,11 @@
 import { Errors } from 'form-backend-validation';
 
 export default {
-    data() {
-        return {
+    data: () => ({
             caseId: "",
             loading: false,
             errors: new Errors()
-        };
-    },
+    }),
 
     created() {},
 
