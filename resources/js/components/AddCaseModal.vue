@@ -14,7 +14,7 @@
         <b-form @submit.stop.prevent="onFormSubmit" ref="form">
             <b-form-group label-for="case-number" label-size="lg">
                 <template v-slot:label>
-                    <fa-icon :icon="['far', 'bookmark']" class="mr-1" />
+                    <fa-icon :icon="['fas', 'bookmark']" class="mr-1" />
                     Case Number
                 </template>
 
