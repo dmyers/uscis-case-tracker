@@ -71,13 +71,7 @@ export default {
     watch: {
         cases: {
             handler() {
-                const cases = this.cases;
-                var caseIds = [];
-
-                _.each(cases, (caseItem) => {
-                    caseIds.push(caseItem.caseNumber);
-                });
-
+                const caseIds = this.caseIds();
                 const caseList = { caseIds: caseIds };
                 const encodedCaseIds = JSON.stringify(caseList);
                 localStorage.setItem('caseIds', encodedCaseIds);
@@ -88,6 +82,17 @@ export default {
     },
 
     computed: {
+        caseIds() {
+            const cases = this.cases;
+            var caseIds = [];
+
+            _.each(cases, (caseItem) => {
+                caseIds.push(caseItem.caseNumber);
+            });
+
+            return caseIds;
+        },
+
         emptyCases() {
             return this.cases.length == 0;
         }
