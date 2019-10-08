@@ -86,12 +86,13 @@ class UscisApi
 
         $tracking = TrackingParser::find($details);
         $date = DateParser::find($details);
+        $details_raw = $details;
         $details = strip_tags($details);
         $id = $this->formatCaseNumber($caseNumber);
 
         return compact(
             'id', 'caseNumber', 'date', 'tracking',
-            'status', 'title', 'details'
+            'status', 'title', 'details', 'details_raw'
         );
     }
 
