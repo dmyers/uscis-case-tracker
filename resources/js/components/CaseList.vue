@@ -86,7 +86,6 @@ export default {
 
                 const encodedCaseIds = JSON.stringify(caseList);
                 localStorage.setItem('caseIds', encodedCaseIds);
-                // localStorage.setItem('caseIds', caseIds);
             },
 
             deep: true
