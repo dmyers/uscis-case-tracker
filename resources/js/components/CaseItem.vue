@@ -1,7 +1,9 @@
 <template>
-    <b-card header-tag="header" footer-tag="footer" class="mb-3">
-        <template v-slot:header>
+    <b-card class="mb-3" no-body>
+        <header @click="open = !open" :class="{'card-header-open': open }" class="card-header">
             <h5 class="float-left card-heading mb-0">
+                <fa-icon v-cloak v-show="open" :icon="['fas', 'chevron-down']" size="sm" class="mr-1" />
+                <fa-icon v-cloak v-show="!open" :icon="['fas', 'chevron-right']" size="sm" class="mr-1" />
                 <span class="text-muted"><strong>Case</strong> #</span>{{ item.id }}
             </h5>
 
@@ -10,19 +12,23 @@
             </b-badge>
 
             <div class="clearfix"></div>
-        </template>
+        </header>
 
-        <b-card-text>
-            <p class="m-0 p-0">{{ item.details }}</p>
-        </b-card-text>
+        <div v-cloak v-if="open">
+            <b-card-body>
+                <b-card-text>
+                    <p class="m-0 p-0">{{ item.details }}</p>
+                </b-card-text>
+            </b-card-body>
+        </div>
 
-        <template v-slot:footer>
+        <footer v-cloak v-if="open" class="card-footer">
             <div class="text-center text-muted">
                 <small>
                     Last Updated: {{ item.date | moment("dddd, MMMM Do YYYY") }}
                 </small>
             </div>
-        </template>
+        </footer>
     </b-card>
 </template>
 
@@ -31,7 +37,9 @@ export default {
     props: ['item'],
 
     data() {
-        return {};
+        return {
+            open: false
+        };
     },
 
     mounted() {},
@@ -55,15 +63,25 @@ export default {
 </script>
 
 <style lang="scss">
-.card footer {
-    padding-top: 0.25rem;
-    padding-bottom: 0.4rem;
-}
-.card-header .case-title {
-    font-size: 150%;
-}
-.card-body p {
-    font-size: 0.8rem;
-    line-height: 18px;
+.card {
+    .card-header {
+        cursor: pointer;
+        border-width: 0;
+
+        &.card-header-open {
+            border-width: 1px;
+        }
+        .case-title {
+            font-size: 150%;
+        }
+    }
+    .card-body p {
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+    .card-footer {
+        padding-top: 0.25rem;
+        padding-bottom: 0.4rem;
+    }
 }
 </style>
