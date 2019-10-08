@@ -75,14 +75,10 @@ export default {
                 var caseIds = [];
 
                 _.each(cases, (caseItem) => {
-                    const caseId = caseItem.caseNumber;
-                    caseIds.push(caseId);
+                    caseIds.push(caseItem.caseNumber);
                 });
 
-                const caseList = {
-                    caseIds: caseIds
-                };
-
+                const caseList = { caseIds: caseIds };
                 const encodedCaseIds = JSON.stringify(caseList);
                 localStorage.setItem('caseIds', encodedCaseIds);
             },
