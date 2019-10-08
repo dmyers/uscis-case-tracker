@@ -15,11 +15,11 @@ Vue.use(BootstrapVue);
 Vue.use(MomentVue);
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFlagUsa, faRedoAlt, faPlus, faPlusCircle, faTimes, faCircleNotch, faChevronRight, faChevronDown, faShippingFast } from '@fortawesome/free-solid-svg-icons'
-import { faCalendarAlt, faCalendarCheck, faClock, faArrowAltCircleDown, faBookmark, faStickyNote } from '@fortawesome/free-regular-svg-icons'
+import { faFlagUsa, faRedoAlt, faPlus, faPlusCircle, faTimes, faCircleNotch, faChevronRight, faChevronDown, faBookmark, faShippingFast } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt, faCalendarCheck, faClock, faArrowAltCircleDown, faStickyNote } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faFlagUsa, faRedoAlt, faPlus, faPlusCircle, faTimes, faCircleNotch, faChevronRight, faChevronDown, faShippingFast, faCalendarAlt, faCalendarCheck, faClock, faArrowAltCircleDown, faBookmark, faStickyNote);
+library.add(faFlagUsa, faRedoAlt, faPlus, faPlusCircle, faTimes, faCircleNotch, faChevronRight, faChevronDown, faBookmark, faShippingFast, faCalendarAlt, faCalendarCheck, faClock, faArrowAltCircleDown, faStickyNote);
 
 Vue.component('fa-icon', FontAwesomeIcon);
 
