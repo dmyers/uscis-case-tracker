@@ -64,7 +64,8 @@ export default {
     created() {},
 
     mounted() {
-        this.loadCases();
+        this.loadCasesWindow();
+        this.loadCasesStorage();
     },
 
     watch: {
@@ -134,7 +135,16 @@ export default {
                 });
         },
 
-        loadCases() {
+        loadCasesWindow() {
+            const caseIds = window.App.case_ids;
+            if (caseIds) {
+                _.each(caseIds, caseId => {
+                    this.addCase(caseId);
+                });
+            }
+        },
+
+        loadCasesStorage() {
             const caseIdList = localStorage.getItem('caseIds');
             if (caseIdList) {
                 const decodedCaseList = JSON.parse(caseIdList);
