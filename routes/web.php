@@ -19,5 +19,6 @@ Route::get('/', function (Request $request) {
         $case_ids = explode(',', $case_ids);
     }
 
-    return view('app', compact('case_ids'));
+    $asset_url = asset('/');
+    return view('app', compact('asset_url', 'case_ids'));
 });
