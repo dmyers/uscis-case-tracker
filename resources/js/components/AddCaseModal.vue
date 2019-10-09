@@ -151,6 +151,7 @@ export default {
 #modal-add-case {
     .modal-footer {
         display: block;
+        padding: .5rem;
     }
     .action-buttons .col {
         padding-left: 5px;
