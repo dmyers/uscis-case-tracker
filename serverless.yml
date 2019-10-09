@@ -44,6 +44,11 @@ resources:
             Type: AWS::S3::Bucket
             Properties:
                 BucketName: uscis-case-tracker
+                CorsConfiguration:
+                    CorsRules:
+                        -   AllowedHeaders: ["*"]
+                            AllowedMethods: [GET]
+                            AllowedOrigins: ["*"]
         AssetsBucketPolicy: # The policy that makes the bucket publicly readable
             Type: AWS::S3::BucketPolicy
             Properties:
