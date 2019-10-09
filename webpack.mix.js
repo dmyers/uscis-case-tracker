@@ -18,7 +18,8 @@ mix.webpackConfig({
     plugins: [
         new FaviconsWebpackPlugin({
             logo: './resources/img/logo.png',
-            prefix: 'img/'
+            prefix: 'img/',
+            cache: './storage/tmp'
         })
     ]
 });
