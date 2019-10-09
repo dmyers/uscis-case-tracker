@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +13,15 @@ const mix = require('laravel-mix');
  */
 
 mix.disableNotifications();
+
+mix.webpackConfig({
+    plugins: [
+        new FaviconsWebpackPlugin({
+            logo: './resources/img/logo.png',
+            prefix: 'img/'
+        }),
+    ]
+});
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
