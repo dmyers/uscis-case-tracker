@@ -3,7 +3,7 @@
         <b-col cols="12" class="text-center text-muted">
             made with
             <fa-icon :icon="['fas', 'heart']" size="sm" class="ml-1 mr-1" />
-            for
+            for my
             <span class="symbol-pi ml-1">&pi;</span>
         </b-col>
     </b-row>
