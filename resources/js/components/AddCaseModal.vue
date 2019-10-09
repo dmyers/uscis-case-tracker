@@ -153,7 +153,7 @@ export default {
         display: block;
         padding: .5rem;
     }
-    .action-buttons .col {
+    .action-buttons .col-6 {
         padding-left: 5px;
         padding-right: 5px;
     }
