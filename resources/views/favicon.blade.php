@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon-180x180.png') }}">
 <link rel="apple-touch-icon" sizes="1024x1024" href="{{ asset('img/apple-touch-icon-1024x1024.png') }}">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Case Tracker">
 <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="{{ asset('img/apple-touch-startup-image-320x460.png') }}">
 <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="{{ asset('img/apple-touch-startup-image-640x920.png') }}">
