@@ -28,7 +28,10 @@ mix.webpackConfig({
             logo: './resources/img/logo.png',
             prefix: 'img/',
             cache: './storage/tmp',
-            inject: true
+            inject: true,
+            favicons: {
+                appName: process.env.MIX_APP_NAME
+            }
         })
     ]
 });
