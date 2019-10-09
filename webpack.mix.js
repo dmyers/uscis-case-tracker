@@ -19,7 +19,7 @@ mix.webpackConfig({
         new FaviconsWebpackPlugin({
             logo: './resources/img/logo.png',
             prefix: 'img/'
-        }),
+        })
     ]
 });
 
