@@ -34,7 +34,6 @@
                     <span v-cloak v-show="loading">
                         <fa-icon :icon="['fas', 'circle-notch']" spin />
                     </span>
-
                     <span v-cloak v-show="!loading">
                         <fa-icon :icon="['fas', 'plus']" class="mr-1" />
                         Add Case
