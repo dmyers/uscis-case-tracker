@@ -31,6 +31,6 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{ asset('apple-touch-startup-image-1536x2008.png') }}">
 <link rel="icon" type="image/png" sizes="228x228" href="{{ asset('coast-228x228.png') }}">
 <meta name="msapplication-TileColor" content="#fff">
-<meta name="msapplication-TileImage" content="{{ asset('img/mstile-144x144.png') }}">
+<meta name="msapplication-TileImage" content="{{ asset('mstile-144x144.png') }}">
 <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
 <link rel="yandex-tableau-widget" href="{{ asset('yandex-browser-manifest.json') }}">
