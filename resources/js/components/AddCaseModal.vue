@@ -29,23 +29,25 @@
         </b-form>
 
         <template v-slot:modal-footer="{ ok, cancel, hide }">
-            <b-col cols="6">
-                <b-button @click="ok" :disabled="loading" variant="primary" size="lg" block>
-                    <span v-cloak v-show="loading">
-                        <fa-icon :icon="['fas', 'circle-notch']" spin />
-                    </span>
-                    <span v-cloak v-show="!loading">
-                        <fa-icon :icon="['fas', 'plus']" class="mr-1" />
-                        Add Case
-                    </span>
-                </b-button>
-            </b-col>
+            <b-row no-gutters>
+                <b-col cols="6">
+                    <b-button @click="ok" :disabled="loading" variant="primary" size="lg" block>
+                        <span v-cloak v-show="loading">
+                            <fa-icon :icon="['fas', 'circle-notch']" spin />
+                        </span>
+                        <span v-cloak v-show="!loading">
+                            <fa-icon :icon="['fas', 'plus']" class="mr-1" />
+                            Add Case
+                        </span>
+                    </b-button>
+                </b-col>
 
-            <b-col cols="6">
-                <b-button @click="hide" :disabled="loading" variant="secondary" size="lg" block>
-                    Cancel
-                </b-button>
-            </b-col>
+                <b-col cols="6">
+                    <b-button @click="hide" :disabled="loading" variant="secondary" size="lg" block>
+                        Cancel
+                    </b-button>
+                </b-col>
+            </b-row>
         </template>
     </b-modal>
 </template>
@@ -146,4 +148,9 @@ export default {
 </script>
 
 <style lang="scss">
+#modal-add-case {
+    .modal-footer {
+        display: block;
+    }
+}
 </style>
