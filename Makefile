@@ -17,6 +17,7 @@ deploy:
 	php artisan view:clear --env=local
 	composer install --optimize-autoloader --no-dev
 	npm run prod
+	aws s3 cp public/img/browserconfig.xml s3://uscis-case-tracker
 	aws s3 cp public/img/manifest.json s3://uscis-case-tracker
 	aws s3 sync public/img s3://uscis-case-tracker/img --delete
 	aws s3 sync public/css s3://uscis-case-tracker/css --delete
