@@ -7,12 +7,12 @@
 
 ### Setup
 
-```bash
+```sh
 $ make setup
 ```
 
 ### Deploy
 
-```bash
+```sh
 $ make deploy
 ```
