@@ -28,7 +28,8 @@ export default {
     color: #ce1f1f;
 }
 .symbol-pi {
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 700;
     color: #333;
 }
 </style>
