@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 /*
@@ -15,11 +16,19 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 mix.disableNotifications();
 
 mix.webpackConfig({
+    output: {
+         publicPath: ""
+    },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './resources/views/favicon.html',
+            filename: '../resources/views/favicon.blade.php'
+        }),
         new FaviconsWebpackPlugin({
             logo: './resources/img/logo.png',
             prefix: 'img/',
-            cache: './storage/tmp'
+            cache: './storage/tmp',
+            inject: true
         })
     ]
 });
