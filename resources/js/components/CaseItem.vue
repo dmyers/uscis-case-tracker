@@ -52,6 +52,8 @@ export default {
         open: false
     }),
 
+    created() {},
+
     mounted() {},
 
     computed: {
