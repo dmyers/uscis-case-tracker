@@ -50,6 +50,7 @@
             </b-col>
         </b-row>
 
+        <made-with />
         <add-case-modal @caseAdded="appendCaseItem" />
     </div>
 </template>
