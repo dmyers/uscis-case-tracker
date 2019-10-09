@@ -1,5 +1,7 @@
 # USCIS Case Tracker
 
+![Screenshot](resources/img/screenshot.png)
+
 ### Demo
 
 
