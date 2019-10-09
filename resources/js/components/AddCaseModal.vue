@@ -29,7 +29,7 @@
         </b-form>
 
         <template v-slot:modal-footer="{ ok, cancel, hide }">
-            <b-row no-gutters>
+            <b-row class="action-buttons" no-gutters>
                 <b-col cols="6">
                     <b-button @click="ok" :disabled="loading" variant="primary" size="lg" block>
                         <span v-cloak v-show="loading">
@@ -151,6 +151,10 @@ export default {
 #modal-add-case {
     .modal-footer {
         display: block;
+    }
+    .action-buttons .col {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 </style>
