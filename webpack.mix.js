@@ -30,7 +30,8 @@ mix.webpackConfig({
             cache: './storage/tmp',
             inject: true,
             favicons: {
-                appName: process.env.MIX_APP_NAME
+                appName: process.env.MIX_APP_NAME,
+                start_url: process.env.MIX_ASSET_URL
             }
         })
     ]
