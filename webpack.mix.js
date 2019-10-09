@@ -31,7 +31,7 @@ mix.webpackConfig({
             inject: true,
             favicons: {
                 appName: process.env.MIX_APP_NAME,
-                start_url: process.env.MIX_ASSET_URL,
+                start_url: process.env.MIX_APP_URL,
                 appleStatusBarStyle: "default"
             }
         })
