@@ -40,7 +40,7 @@ class ApiController extends Controller
         if ($case['status'] === 'Card Was Delivered To Me By The Post Office') {
             $case['status'] = 'Card Delivered';
         } else if ($case['status'] === 'Case is Ready to Be Scheduled for An Interview') {
-            $case['status'] = 'Interview Ready';
+            $case['status'] = 'Scheduling Interview';
             $case['status_code'] = 'pending';
         } else if ($case['status'] === 'Case Was Received') {
             $case['status'] = 'Case Received';
