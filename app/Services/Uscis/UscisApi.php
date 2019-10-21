@@ -83,10 +83,16 @@ class UscisApi
         $status = trim($dom->find('.current-status-sec')->text());
         $title = $dom->find('.appointment-sec h1')->innerHtml();
         $details = $dom->find('.appointment-sec p')->innerHtml();
+        $form = null;
+        $tracking = null;
+        $date = null;
 
-        $form = FormParser::find($details);
-        $tracking = TrackingParser::find($details);
-        $date = DateParser::find($details);
+        if (strpos($details, 'At this time USCIS cannot provide you with information for your case.') === false) {
+            $form = FormParser::find($details);
+            $tracking = TrackingParser::find($details);
+            $date = DateParser::find($details);
+        }
+
         $details_raw = $details;
         $details = strip_tags($details);
         $id = $this->formatCaseNumber($caseNumber);
