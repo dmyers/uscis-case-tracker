@@ -46,6 +46,8 @@ class ApiController extends Controller
             $case['status'] = 'Case Received';
         } else if ($case['status'] === 'Case Was Approved') {
             $case['status'] = 'Case Approved';
+        } else if ($case['status'] === 'Fingerprint Review Was Completed') {
+            $case['status'] = 'Fingerprint Completed';
         }
 
         if (strpos(strtolower($case['title']), 'received') !== false) {
