@@ -84,6 +84,7 @@ class UscisApi
         $title = $dom->find('.appointment-sec h1')->innerHtml();
         $details = $dom->find('.appointment-sec p')->innerHtml();
 
+        $form = FormParser::find($details);
         $tracking = TrackingParser::find($details);
         $date = DateParser::find($details);
         $details_raw = $details;
@@ -91,7 +92,7 @@ class UscisApi
         $id = $this->formatCaseNumber($caseNumber);
 
         return compact(
-            'id', 'caseNumber', 'date', 'tracking',
+            'id', 'caseNumber', 'date', 'tracking', 'form',
             'status', 'title', 'details', 'details_raw'
         );
     }
