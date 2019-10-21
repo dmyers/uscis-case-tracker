@@ -5,6 +5,7 @@
                 <fa-icon v-cloak v-show="open" :icon="['fas', 'chevron-down']" size="sm" class="mr-1" />
                 <fa-icon v-cloak v-show="!open" :icon="['fas', 'chevron-right']" size="sm" class="mr-1" />
                 <span class="text-muted"><strong>Case</strong> #</span>{{ item.caseNumber }}
+                <b-badge v-if="item.form" variant="primary" class="ml-2">{{ item.form }}</b-badge>
             </h5>
 
             <div class="float-md-right">
