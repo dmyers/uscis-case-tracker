@@ -23,6 +23,7 @@ package:
         - 'resources/img/**'
         - 'resources/js/**'
         - 'resources/sass/**'
+        - 'public/img/**'
 
 functions:
     website:
