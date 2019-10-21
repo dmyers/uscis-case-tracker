@@ -35,7 +35,6 @@ class ApiController extends Controller
 
         $uscis = app('uscis');
         $case = $uscis->getCaseInfo($caseNumber);
-        $case['status_code'] = 'unknown';
 
         if ($case['status'] === 'Card Was Delivered To Me By The Post Office') {
             $case['status'] = 'Card Delivered';
@@ -48,22 +47,27 @@ class ApiController extends Controller
             $case['status'] = 'Case Approved';
         } else if ($case['status'] === 'Fingerprint Review Was Completed') {
             $case['status'] = 'Fingerprint Completed';
+            $case['status_code'] = 'pending';
         }
 
-        if (strpos(strtolower($case['title']), 'received') !== false) {
-            $case['status_code'] = 'pending';
-        } else if (strpos(strtolower($case['title']), 'denied') !== false) {
-            $case['status_code'] = 'failed';
-        } else if (strpos(strtolower($case['title']), 'rejected') !== false) {
-            $case['status_code'] = 'failed';
-        } else if (strpos(strtolower($case['title']), 'updated') !== false) {
-            $case['status_code'] = 'complete';
-        } else if (strpos(strtolower($case['title']), 'approved') !== false) {
-            $case['status_code'] = 'complete';
-        } else if (strpos(strtolower($case['title']), 'completed') !== false) {
-            $case['status_code'] = 'complete';
-        } else if (strpos(strtolower($case['title']), 'delivered') !== false) {
-            $case['status_code'] = 'complete';
+        if (empty($case['status_code'])) {
+            if (strpos(strtolower($case['title']), 'received') !== false) {
+                $case['status_code'] = 'pending';
+            } else if (strpos(strtolower($case['title']), 'denied') !== false) {
+                $case['status_code'] = 'failed';
+            } else if (strpos(strtolower($case['title']), 'rejected') !== false) {
+                $case['status_code'] = 'failed';
+            } else if (strpos(strtolower($case['title']), 'updated') !== false) {
+                $case['status_code'] = 'complete';
+            } else if (strpos(strtolower($case['title']), 'approved') !== false) {
+                $case['status_code'] = 'complete';
+            } else if (strpos(strtolower($case['title']), 'completed') !== false) {
+                $case['status_code'] = 'complete';
+            } else if (strpos(strtolower($case['title']), 'delivered') !== false) {
+                $case['status_code'] = 'complete';
+            } else {
+                $case['status_code'] = 'unknown';
+            }
         }
 
         return response($case);
