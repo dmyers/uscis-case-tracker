@@ -18,6 +18,7 @@ package:
         - .env
         - .env.local
         - 'node_modules/**'
+        - 'database/**'
         - 'storage/**'
         - 'tests/**'
         - 'resources/img/**'
