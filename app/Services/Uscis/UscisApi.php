@@ -95,10 +95,9 @@ class UscisApi
 
         $details_raw = $details;
         $details = strip_tags($details);
-        $id = $this->formatCaseNumber($caseNumber);
 
         return compact(
-            'id', 'caseNumber', 'date', 'tracking', 'form',
+            'caseNumber', 'date', 'tracking', 'form',
             'status', 'title', 'details', 'details_raw'
         );
     }
