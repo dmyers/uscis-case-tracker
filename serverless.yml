@@ -25,6 +25,8 @@ package:
         - 'resources/js/**'
         - 'resources/sass/**'
         - 'public/img/**'
+        - 'public/css/**'
+        - 'public/js/**'
 
 functions:
     website:
