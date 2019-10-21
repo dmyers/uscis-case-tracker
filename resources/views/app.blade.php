@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ config('app.name') }}</title>
     @include('favicon')
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script>
     window.App = {!! collect(compact('case_ids'))->toJson() !!};
     </script>
@@ -20,7 +20,7 @@
     @if (app()->isLocal())
         <script src="http://localhost:8080/js/app.js"></script>
     @else
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
     @endif
 </body>
 </html>
