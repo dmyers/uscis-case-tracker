@@ -15,6 +15,10 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 mix.disableNotifications();
 
+if (mix.inProduction()) {
+    mix.version();
+}
+
 mix.webpackConfig({
     output: {
          publicPath: ""
