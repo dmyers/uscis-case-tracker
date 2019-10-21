@@ -2,8 +2,6 @@
 
 namespace App\Services\Uscis;
 
-use RuntimeException;
-
 /**
  * Parses tracking numbers for packages.
  *
