@@ -38,10 +38,12 @@ class ApiController extends Controller
         $case['status_code'] = 'unknown';
 
         if ($case['status'] === 'Card Was Delivered To Me By The Post Office') {
-            $case['status'] = 'Card Was Delivered';
+            $case['status'] = 'Card Delivered';
         } else if ($case['status'] === 'Case is Ready to Be Scheduled for an Interview') {
-            $case['status'] = 'Case Ready for Interview';
+            $case['status'] = 'Interview Ready';
             $case['status_code'] = 'pending';
+        } else if ($case['status'] === 'Case Was Received') {
+            $case['status'] = 'Case Received';
         }
 
         if (strpos(strtolower($case['title']), 'received') !== false) {
