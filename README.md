@@ -5,7 +5,7 @@
 ### Demo
 
 
-> See the [demo app hosted on AWS lambda](https://f4akzn06xk.execute-api.us-east-1.amazonaws.com/dev/)
+> See the [demo app hosted on AWS lambda](https://uscis.derekmyers.com/)
 
 ### Setup
 
