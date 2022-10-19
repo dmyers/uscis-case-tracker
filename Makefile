@@ -10,7 +10,7 @@ watch:
 	npm run hot
 
 deploy:
-	rm .env
+	rm -f .env
 	php artisan route:clear --env=local
 	php artisan cache:clear --env=local
 	php artisan config:clear --env=local
