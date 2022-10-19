@@ -31,6 +31,7 @@ class UscisServiceProvider extends ServiceProvider
                     // 'Host'            => 'egov.uscis.gov',
                     'User-Agent'      => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
                 ],
+                'verify' => false,
             ]);
 
             // $goutte = new Goutte();
