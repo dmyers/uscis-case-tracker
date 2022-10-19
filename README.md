@@ -4,7 +4,6 @@
 
 ### Demo
 
-
 > See the [demo app hosted on AWS lambda](https://uscis.derekmyers.com/)
 
 ### Setup

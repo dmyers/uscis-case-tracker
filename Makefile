@@ -2,6 +2,7 @@ setup:
 	cp .env.local .env
 	composer install
 	npm install
+    npm install -g serverless@2
 
 preview:
 	php artisan serve
