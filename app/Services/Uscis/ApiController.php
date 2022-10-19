@@ -43,6 +43,8 @@ class ApiController extends Controller
             $case['status_code'] = 'pending';
         } else if ($case['status'] === 'Case Was Received') {
             $case['status'] = 'Case Received';
+        } else if ($case['status'] === 'Case Was Received and A Receipt Notice Was Sent') {
+            $case['status'] = 'Case Received Notice Sent';
         } else if ($case['status'] === 'Case Was Approved') {
             $case['status'] = 'Case Approved';
         } else if ($case['status'] === 'Fingerprint Review Was Completed') {
