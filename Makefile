@@ -1,6 +1,7 @@
 setup:
 	cp .env.local .env
-	composer install
+	docker run -it --rm -v ${PWD}:/var/www/html dmyers/laravel:7.2 composer install
+    nvm use
 	npm install
     npm install -g serverless@2
 
