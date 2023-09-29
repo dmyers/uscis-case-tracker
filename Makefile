@@ -15,6 +15,7 @@ deploy:
 	rm -f .env
 	docker run -it --rm -v ${PWD}:/var/www/html dmyers/laravel:7.2 php artisan optimize:clear --env=local
 	docker run -it --rm -v ${PWD}:/var/www/html dmyers/laravel:7.2 composer install --optimize-autoloader --no-dev
+	docker run -it --rm -v ${PWD}:/var/www/html dmyers/laravel:7.2 composer dump-autoload
 	nvm use
 	serverless deploy
 	npm run prod
