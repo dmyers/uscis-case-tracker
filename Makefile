@@ -1,9 +1,9 @@
 setup:
 	cp .env.local .env
 	docker run -it --rm -v ${PWD}:/var/www/html dmyers/laravel:7.2 composer install
-    nvm use
+	nvm use
 	npm install
-    npm install -g serverless@2
+	npm install -g serverless@2
 
 preview:
 	php artisan serve
@@ -13,10 +13,7 @@ watch:
 
 deploy:
 	rm -f .env
-	php artisan route:clear --env=local
-	php artisan cache:clear --env=local
-	php artisan config:clear --env=local
-	php artisan view:clear --env=local
+	php artisan optimize:clear --env=local
 	composer install --optimize-autoloader --no-dev
 	serverless deploy
 	npm run prod
