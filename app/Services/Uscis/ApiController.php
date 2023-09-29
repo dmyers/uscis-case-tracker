@@ -53,6 +53,9 @@ class ApiController extends Controller
         } else if ($case['status'] === 'Case Was Updated To Show Fingerprints Were Taken') {
             $case['status'] = 'Fingerprints Taken';
             $case['status_code'] = 'pending';
+        } else if ($case['status'] === 'Case Is Being Actively Reviewed By USCIS') {
+            $case['status'] = 'Case Review';
+            $case['status_code'] = 'pending';
         }
 
         if (empty($case['status_code'])) {
