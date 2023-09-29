@@ -25,3 +25,6 @@ deploy:
 	aws s3 sync public/img s3://uscis-case-tracker/img --delete
 	aws s3 sync public/css s3://uscis-case-tracker/css --delete
 	aws s3 sync public/js s3://uscis-case-tracker/js --delete
+
+logs:
+	serverless logs -f website
