@@ -15,6 +15,7 @@ deploy:
 	rm -f .env
 	php artisan optimize:clear --env=local
 	composer install --optimize-autoloader --no-dev
+	nvm use
 	serverless deploy
 	npm run prod
 	aws s3 cp public/img/browserconfig.xml s3://uscis-case-tracker
